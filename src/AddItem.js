@@ -36,7 +36,7 @@ export default function AddItem({ onAddItem, name, desc, setDesc, setName }) {
           id="submit"
           className="ui-button   m-2 hover:opacity-0.8 disabled:opacity-80 disabled:cursor-disabled active:shadow-sm active:translate-y-px bg-blue-700 text-white rounded cursor-pointer transition-opaity duration-200 easy-out text-16 px-2 py-2 w-40 shadow-lg"
           value="Добавить"
-          disabled={!(name, desc)}
+          disabled={!(name*desc)}
         />
       </div>
     </form>
