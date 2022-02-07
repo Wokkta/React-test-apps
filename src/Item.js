@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './index.css';
 export default function Item(props) {
   const [total, setTotal] = useState(0);
 
@@ -21,20 +21,20 @@ export default function Item(props) {
 
   return (
     <div className="item">
-      <div className="item-info">
-        <h2 className="item-title">{info.name}</h2>
+      <div className="item-info ml-2">
+        <h2 className="item-title text-30px">{info.name}</h2>
         <p className="item-desc">{info.desc}</p>
       </div>
-      <div className="item-quantity">
+      <div className="item-quantity flex items-center mb-50px">
         <button
-          className="bg-white c-black border border-lightgray px-5 py-20 min-w-50 text-16 rounded-3 cursor-pointer easy-out duration-200 mr-10 ml-10"
+          className="item-button ml-2 text-2xl  active:shadow-lg hover:opacity-80 disabled:opacity-40 disabled:cursor-disabled active:translate-y-px bg-white text-black border-1 rounded-3px cursor-pointer ease-out duration-200 transition-opacity shadow-lg  mr-2"
           disabled={total === 0}
           onClick={handleRemoveClick}
         >
           -
         </button>
-        <h3 className="item-total">{total ? total : ""}</h3>
-        <button className="item-button" onClick={handleAddClick}>
+        <h3 className="item-total text-2xl">{total ? total : ""}</h3>
+        <button className="item-button ml-2 text-2xl  active:shadow-lg hover:opacity-80 disabled:opacity-40 disabled:cursor-disabled active:translate-y-px bg-white text-black border-1 rounded-3px cursor-pointer ease-out duration-200 transition-opacity shadow-lg  mr-2 " onClick={handleAddClick}>
           +
         </button>
       </div>
